@@ -1,3 +1,3 @@
 package nhlApi
 
-const baseURL = "http://statsapi.web.nhl.com/api/v1"
+const baseURL string = "http://statsapi.web.nhl.com/api/v1"
