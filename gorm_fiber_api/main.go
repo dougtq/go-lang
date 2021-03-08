@@ -11,8 +11,8 @@ import (
     _ "github.com/jinzhu/gorm/dialects/sqlite"
 )
 
-func helloWorld(c *fiber.Ctx) {
-  c.Send("Hello,  World")
+func pong(c *fiber.Ctx) {
+  c.Send("pong")
 }
 
 func setupRoutes(app *fiber.App) {
@@ -46,7 +46,7 @@ func main() {
   initDatabase()
   defer database.DBconn.Close()
 
-  app.Get("/", helloWorld)
+  app.Get("/ping", pong)
 
   setupRoutes(app)
 
